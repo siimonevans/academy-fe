@@ -1,0 +1,130 @@
+@use 'config' as *;
+
+/* ============================================
+    Base font
+*/
+html {
+    @include font-size(body);
+    line-height: 1.4;
+    color: var(--color--black);
+}
+
+/* ============================================
+    Families – one mixin per typeface
+    :: For each font mixin defined here, make sure each property is negated (set
+    :: to its default value, usually `inherit`) in all other font mixins.
+*/
+@mixin heading-text() {
+    font-family: $font--primary;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+@mixin body-text() {
+    font-family: $font--primary;
+    font-style: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
+}
+
+@mixin quote-text() {
+    font-family: $font--secondary;
+    font-style: italic;
+    font-weight: inherit;
+    text-transform: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+    @include heading-text();
+    margin: 0 0 1rem;
+}
+
+// ------------------------------- Default sizes ----------------------------
+h1 {
+    @include font-size(heading-one);
+}
+
+h2 {
+    @include font-size(heading-two);
+}
+
+h3 {
+    @include font-size(heading-three);
+}
+
+h4 {
+    @include font-size(heading-four);
+}
+
+h5,
+h6 {
+    @include font-size(heading-five);
+}
+
+small {
+    @include font-size(supporting);
+}
+
+// ------------------------------- Feature ----------------------------------
+.feature {
+    &--one {
+        @include font-size(feature-one);
+        font-weight: $weight--semibold;
+        line-height: 1.1;
+    }
+
+    &--two {
+        @include font-size(feature-two);
+        font-weight: $weight--semibold;
+        line-height: 1.1;
+    }
+}
+
+// ------------------------------- Heading ----------------------------------
+.heading {
+    &--one {
+        @include font-size(heading-one);
+    }
+
+    &--two {
+        @include font-size(heading-two);
+    }
+
+    &--three {
+        @include font-size(heading-three);
+    }
+
+    &--four {
+        @include font-size(heading-four);
+    }
+
+    &--five {
+        @include font-size(heading-five);
+    }
+}
+
+// ------------------------------- Body ----------------------------------
+.body {
+    @include font-size(body);
+    font-weight: $weight--normal;
+    line-height: 1.4;
+
+    &--feature {
+        @include font-size(body-feature);
+    }
+}
+
+// ------------------------------- Supporting ----------------------------------
+.supporting {
+    @include font-size(supporting);
+}
+
+blockquote {
+    @include quote-text();
+}

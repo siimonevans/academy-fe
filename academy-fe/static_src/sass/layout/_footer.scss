@@ -1,0 +1,11 @@
+@use 'config' as *;
+
+.footer {
+    padding: 20px 10px;
+    color: var(--color--white);
+    background-color: var(--color--black);
+
+    @include media-query(medium) {
+        padding: 20px;
+    }
+}

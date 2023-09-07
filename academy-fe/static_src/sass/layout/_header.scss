@@ -1,0 +1,19 @@
+@use 'config' as *;
+@use 'sass:color';
+
+.header {
+    padding: 10px;
+    background-color: var(--color--indigo);
+    color: var(--color--white);
+
+    @include media-query(medium) {
+        padding: 20px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        max-width: $site-width;
+        margin: 0 auto;
+    }
+}

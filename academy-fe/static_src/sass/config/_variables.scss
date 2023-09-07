@@ -1,0 +1,127 @@
+@use 'sass:color';
+// --------------------------------- Colors ------------------------------------
+
+:root {
+    --color--coral: #fd5765;
+    // Coral replacement for text smaller than 18px on white
+    --color--coral-dark: #eb0316;
+    --color--lagoon: #3beccd;
+    // Persion indigo in torchbox guidelines
+    --color--indigo: #2f128d;
+    // Deep indigo in torchbox guidelines
+    --color--dark-indigo: #251657;
+    --color--stone: #284d74;
+    --color--light-stone: #4088a9;
+    --color--succulent: #d3e8e1;
+    --color--buttermilk: #fffbf0;
+    --color--light-grey: #f4f3f6;
+    --color--light-grey-accessible: #757575;
+    --color--grey: #444;
+    --color--grey-dark: #333;
+    --color--grey-border: #e6e4ea;
+    --color--white: #fff;
+    --color--white-translucent: rgba(255, 255, 255, 0.8);
+    --color--black-translucent: rgba(0, 0, 0, 0.05);
+    --color--black: #000;
+    --color--focus-bg: #ffbf47;
+}
+
+// Button colours
+$button-colours: (
+    primary: (
+        bg: var(--color--black),
+        color: var(--color--white),
+    ),
+    secondary: (
+        bg: var(var(--color--white)),
+        color: var(--color--black),
+    ),
+    tertiary: (
+        bg: var(--color--black),
+        color: var(var(--color--white)),
+    ),
+);
+
+// --------------------------------- Fonts -------------------------------------
+
+$font--primary: sans-serif;
+$font--secondary: sans-serif;
+
+// Font weights
+$weight--bold: 700;
+$weight--semibold: 600;
+$weight--medium: 500;
+$weight--normal: 400;
+$weight--light: 200;
+
+// Font sizes
+$base-font-size: 16px;
+$base-line-height: 25px;
+
+// Font sizes
+$large-font-sizes: (
+    feature-one: 90px,
+    feature-two: 76px,
+    heading-one: 64px,
+    heading-two: 46px,
+    heading-three: 32px,
+    heading-four: 30px,
+    heading-five: 24px,
+    body-feature: 18px,
+    body: 14px,
+    supporting: 12px,
+);
+
+$medium-font-sizes: (
+    feature-one: 78px,
+    feature-two: 68px,
+    heading-one: 52px,
+    heading-two: 38px,
+    heading-three: 28px,
+    heading-four: 26px,
+    heading-five: 20px,
+    body-feature: 16px,
+    body: 14px,
+    supporting: 12px,
+);
+
+$small-font-sizes: (
+    feature-one: 44px,
+    feature-two: 38px,
+    heading-one: 32px,
+    heading-two: 28px,
+    heading-three: 24px,
+    heading-four: 22px,
+    heading-five: 18px,
+    body-feature: 14px,
+    body: 12px,
+    supporting: 12px,
+);
+
+// --------------------------------- Sizing ------------------------------------
+
+$breakpoints: ('medium' '(min-width: 599px)', 'large' '(min-width: 1023px)');
+
+// Layout
+$site-width: 1280px;
+
+// Grid setup
+$grid: 20px;
+
+// --------------------------------- Misc --------------------------------------
+
+$transition: 0.25s ease-out;
+$z-index: (
+    under: -1,
+    base: 10,
+    overlap: 20,
+    header: 30,
+    footer: 40,
+    nav: 50,
+    cookie-message: 100,
+    modal: 110,
+    modal-controls: 120,
+);
+
+// --------------------------------- Accessibility -----------------------------
+$focus-width: 3px;

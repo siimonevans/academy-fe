@@ -1,0 +1,8 @@
+@use 'config' as *;
+
+.layout {
+    background-color: var(var(--color--white));
+    max-width: $site-width;
+    margin: 0 auto;
+    padding: $grid;
+}

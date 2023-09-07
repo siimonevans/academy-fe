@@ -1,0 +1,4 @@
+static_compiled
+*.html
+.git
+node_modules

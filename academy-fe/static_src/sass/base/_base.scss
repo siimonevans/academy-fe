@@ -1,0 +1,93 @@
+@use 'config' as *;
+@use 'sass:color';
+
+// Box Sizing
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// Prevent text size change on orientation change.
+html {
+    font-family: $font--primary;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+
+    @media (prefers-reduced-motion: reduce) {
+        scroll-behavior: auto;
+    }
+
+    // Fix for Chrome which doesn't correctly scroll to form validation messages when this is set to smooth
+    &.no-scroll-behaviour {
+        scroll-behavior: auto;
+    }
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+
+    &.no-scroll {
+        overflow-y: hidden;
+    }
+}
+
+// Prevent empty space below images appearing
+img,
+svg {
+    vertical-align: top;
+}
+
+// Responsive images
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+form {
+    button:focus,
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: $focus-width solid --color--focus-bg;
+        outline-offset: 0;
+    }
+}
+
+a {
+    color: var(--color--black);
+    text-decoration: none;
+    transition: color $transition;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: $focus-width solid transparent;
+        color: var(--color--black);
+        background-color: var(--color--focus-bg);
+        box-shadow: (
+            0 (-$focus-width/2) var(--color--focus-bg),
+            0 $focus-width var(--color--black)
+        );
+        text-decoration: none;
+    }
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
