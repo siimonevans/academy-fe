@@ -1,5 +1,10 @@
 # Academy FE boilerplate
 
+## Compiled files
+
+- CSS [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/css/main.css)
+- JS [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/js/main.js)
+
 ## Running it locally
 
 Clone the repo, and in the root dir:
