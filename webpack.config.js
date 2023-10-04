@@ -68,18 +68,17 @@ const options = {
                     {
                         loader: 'css-loader',
                         options: {
-                            sourceMap: true,
+                            sourceMap: false,
                         },
                     },
                     {
                         loader: 'postcss-loader',
                         options: {
-                            sourceMap: true,
+                            sourceMap: false,
                             postcssOptions: {
                                 plugins: [
                                     'autoprefixer',
                                     'postcss-custom-properties',
-                                    ['cssnano', { preset: 'default' }],
                                 ],
                             },
                         },
@@ -87,10 +86,10 @@ const options = {
                     {
                         loader: 'sass-loader',
                         options: {
-                            sourceMap: true,
+                            sourceMap: false,
                             implementation: sass,
                             sassOptions: {
-                                outputStyle: 'compressed',
+                                outputStyle: 'expanded',
                             },
                         },
                     },

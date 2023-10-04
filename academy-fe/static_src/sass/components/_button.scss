@@ -3,20 +3,66 @@
 .button {
     background-color: transparent;
     background-image: none;
-    border: 0;
     box-shadow: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: 2px solid transparent;
+    transition: color $transition, background-color $transition,
+        border-color $transition;
 
     &:hover {
         cursor: pointer;
     }
 
     &:focus {
-        outline: $focus-width solid --color--focus-bg;
+        outline: $focus-width solid var(--color--focus-bg);
 
         &:not(:active):not(:hover) {
-            border-color: --color--focus-bg;
-            background-color: --color--focus-bg;
+            border-color: var(--color--focus-bg);
+            background-color: var(--color--focus-bg);
             color: var(--color--black);
+        }
+    }
+
+    &--primary {
+        background-color: var(--color--indigo);
+        color: var(--color--white);
+
+        &:hover {
+            background-color: var(--color--coral);
+            color: var(--color--white);
+        }
+    }
+
+    &--secondary {
+        background-color: var(--color--lagoon);
+        color: var(--color--black);
+
+        &:hover {
+            background-color: var(--color--indigo);
+            color: var(--color--white);
+        }
+    }
+
+    &--tertiary {
+        background-color: var(--color--coral);
+        color: var(--color--white);
+
+        &:hover {
+            background-color: var(--color--indigo);
+            color: var(--color--white);
+        }
+    }
+
+    &--border {
+        border: 2px solid var(--color--indigo);
+        color: var(--color--indigo);
+
+        &:hover {
+            background-color: var(--color--indigo);
+            border-color: var(--color--indigo);
+            color: var(--color--white);
         }
     }
 }

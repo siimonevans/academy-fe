@@ -1,8 +1,20 @@
 @use 'config' as *;
 
 .layout {
-    background-color: var(var(--color--white));
+    background-color: var(--color--white);
     max-width: $site-width;
     margin: 0 auto;
-    padding: $grid;
+    padding: ($grid * 2) $grid;
+
+    &__article {
+        margin-bottom: ($grid * 2);
+        border-top: 1px solid var(--color--border);
+        padding: ($grid * 2) 0;
+    }
+
+    &__demo-block {
+        margin: 0 0 $grid;
+        padding: $grid 0 ($grid * 2);
+        border-bottom: 1px solid var(--color--border);
+    }
 }

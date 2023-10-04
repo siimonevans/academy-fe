@@ -2,18 +2,108 @@
 @use 'sass:color';
 
 .header {
-    padding: 10px;
+    $root: &;
     background-color: var(--color--indigo);
     color: var(--color--white);
 
-    @include media-query(medium) {
-        padding: 20px;
-    }
-
     &__inner {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         max-width: $site-width;
         margin: 0 auto;
+        padding: 10px;
+
+        @include media-query(medium) {
+            padding: 20px;
+        }
+    }
+
+    &__logo {
+        @include font-size(heading-five);
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: var(--color--white);
+        transition: color $transition;
+
+        &:hover {
+            color: var(--color--lagoon);
+
+            #{$root}__logo-icon {
+                transform: rotate(5deg);
+                fill: var(--color--lagoon);
+            }
+        }
+
+        &:focus {
+            color: var(--color--black);
+
+            #{$root}__logo-icon {
+                fill: var(--color--black);
+            }
+        }
+    }
+
+    &__logo-text {
+        margin-top: 3px;
+    }
+
+    &__logo-icon {
+        width: 40px;
+        height: 40px;
+        fill: var(--color--white);
+        transition: transform $transition, fill $transition;
+    }
+
+    &__navigation {
+        display: flex;
+        gap: $grid;
+    }
+
+    &__navigation-link {
+        @include font-size(body);
+        position: relative;
+        padding: 5px;
+        font-weight: $weight--bold;
+        color: var(--color--white);
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            right: 0;
+            width: 20px;
+            height: 3px;
+            margin: 0 auto;
+            background-color: var(--color--white);
+            border-radius: 3px;
+            opacity: 0;
+            transform: translateY(3px);
+            transition: opacity $transition, transform $transition,
+                background-color $transition;
+        }
+
+        &:hover {
+            color: var(--color--lagoon);
+
+            &::after {
+                opacity: 1;
+                transform: translateY(0);
+                background-color: var(--color--lagoon);
+            }
+        }
+
+        &:focus {
+            &:hover {
+                color: var(--color--black);
+            }
+
+            &::after {
+                display: none;
+            }
+        }
     }
 }

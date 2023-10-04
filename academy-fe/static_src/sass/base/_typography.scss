@@ -128,3 +128,16 @@ small {
 blockquote {
     @include quote-text();
 }
+
+// ------------------------------- Rich text ----------------------------------
+.rich-text {
+    max-width: 700px;
+
+    a {
+        color: var(--color--indigo);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

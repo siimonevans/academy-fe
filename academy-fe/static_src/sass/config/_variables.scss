@@ -24,6 +24,7 @@
     --color--black-translucent: rgba(0, 0, 0, 0.05);
     --color--black: #000;
     --color--focus-bg: #ffbf47;
+    --color--border: #eee;
 }
 
 // Button colours
@@ -62,26 +63,26 @@ $base-line-height: 25px;
 $large-font-sizes: (
     feature-one: 90px,
     feature-two: 76px,
-    heading-one: 64px,
-    heading-two: 46px,
+    heading-one: 50px,
+    heading-two: 35px,
     heading-three: 32px,
     heading-four: 30px,
     heading-five: 24px,
     body-feature: 18px,
-    body: 14px,
+    body: 16px,
     supporting: 12px,
 );
 
 $medium-font-sizes: (
     feature-one: 78px,
     feature-two: 68px,
-    heading-one: 52px,
-    heading-two: 38px,
+    heading-one: 40px,
+    heading-two: 30px,
     heading-three: 28px,
     heading-four: 26px,
     heading-five: 20px,
-    body-feature: 16px,
-    body: 14px,
+    body-feature: 18px,
+    body: 16px,
     supporting: 12px,
 );
 
@@ -89,12 +90,12 @@ $small-font-sizes: (
     feature-one: 44px,
     feature-two: 38px,
     heading-one: 32px,
-    heading-two: 28px,
+    heading-two: 25px,
     heading-three: 24px,
     heading-four: 22px,
     heading-five: 18px,
-    body-feature: 14px,
-    body: 12px,
+    body-feature: 16px,
+    body: 14px,
     supporting: 12px,
 );
 
