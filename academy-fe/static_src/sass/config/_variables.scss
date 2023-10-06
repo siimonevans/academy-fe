@@ -45,8 +45,7 @@ $button-colours: (
 
 // --------------------------------- Fonts -------------------------------------
 
-$font--primary: sans-serif;
-$font--secondary: sans-serif;
+$font--primary: 'Open Sans', serif;
 
 // Font weights
 $weight--bold: 700;
@@ -66,7 +65,7 @@ $large-font-sizes: (
     heading-one: 50px,
     heading-two: 35px,
     heading-three: 32px,
-    heading-four: 30px,
+    heading-four: 28px,
     heading-five: 24px,
     body-feature: 18px,
     body: 16px,
@@ -79,7 +78,7 @@ $medium-font-sizes: (
     heading-one: 40px,
     heading-two: 30px,
     heading-three: 28px,
-    heading-four: 26px,
+    heading-four: 25px,
     heading-five: 20px,
     body-feature: 18px,
     body: 16px,
@@ -91,8 +90,8 @@ $small-font-sizes: (
     feature-two: 38px,
     heading-one: 32px,
     heading-two: 25px,
-    heading-three: 24px,
-    heading-four: 22px,
+    heading-three: 22px,
+    heading-four: 19px,
     heading-five: 18px,
     body-feature: 16px,
     body: 14px,

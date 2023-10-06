@@ -2,11 +2,22 @@
 <html lang="en-gb">
     <head>
         <meta charset="utf-8">
-        <title>Academy FE</title>
+        <title>Academy FE framework</title>
         <meta name="description" content="Academy front-end boilerplate">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CDN -->
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+        <!-- Framework -->
         <link rel="stylesheet" type="text/css" href="../static_compiled/css/main.css">
+
+        <!-- Demo only -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
     </head>
     <body>
         <a href="#main-content" class="skip-link" data-skip-link>Skip to main content</a>
@@ -34,94 +45,164 @@
                 <h1>Components</h1>
                 <article class="layout__article">
                     <div class="layout__demo-block">
-                        <h2>Hello world</h2>
+                        <h2>Hello!</h2>
                         <div class="rich-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Cras tincidunt</b> dignissim nulla eget varius. Donec interdum <i>facilisis</i> tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus ut sagittis justo. Nam enim purus, pellentesque at lorem et, rhoncus luctus ante. Integer vel aliquet elit.</p>
+                            <p>This is a handy group of front-end building blocks for use in your picnic app.</p>
                         </div>
                     </div>
 
                     <div class="layout__demo-block">
                         <h2>Buttons</h2>
-                        <a href="" class="button button--primary">Primary button</a>
-                        <a href="" class="button button--secondary">Secondary button</a>
-                        <a href="" class="button button--tertiary">Tertiary button</a>
-                        <a href="" class="button button--border">Border button</a>
+                        <div class="layout__single">
+                            <a href="" class="button button--primary">Primary button</a>
+                            <pre><code class="language-html">&lt;a href="" class="button button--primary"&gt;Primary button&lt;/a&gt;</code></pre>
+                        </div>
+                        <div class="layout__single">
+                            <a href="" class="button button--secondary">Secondary button</a>
+                            <pre><code class="language-html">&lt;a href="" class="button button--secondary"&gt;Secondary button&lt;/a&gt;</code></pre>
+                        </div>
+                        <div class="layout__single">
+                            <a href="" class="button button--tertiary">Tertiary button</a>
+                            <pre><code class="language-html">&lt;a href="" class="button button--tertiary"&gt;Tertiary button&lt;/a&gt;</code></pre>
+                        </div>
+                        <div class="layout__single">
+                            <a href="" class="button button--border">Border button</a>
+                            <pre><code class="language-html">&lt;a href="" class="button button--border"&gt;Border button&lt;/a&gt;</code></pre>
+                        </div>
                     </div>
 
                     <div class="layout__demo-block">
                         <h2>Typography</h2>
-                        <div class="rich-text">
+                        <div class="layout__single">
                             <h1>Heading one</h1>
+                            <pre><code class="language-html">&lt;h1&gt;Heading one&lt;/h1&gt;</code></pre>
+                        </div>
+                        <div class="layout__single">
                             <h2>Heading two</h2>
+                            <pre><code class="language-html">&lt;h2&gt;Heading two&lt;/h2&gt;</code></pre>
+                        </div>
+                        <div class="layout__single">
                             <h3>Heading three</h3>
+                            <pre><code class="language-html">&lt;h3&gt;Heading three&lt;/h3&gt;</code></pre>
+                        </div>
+                        <div class="layout__single">
                             <h4>Heading four</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Cras tincidunt</b> dignissim nulla eget varius. Donec interdum <i>facilisis</i> tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus ut sagittis justo. Nam enim purus, pellentesque at lorem et, rhoncus luctus ante. Integer vel aliquet elit.</p>
-                            <p><a href="#">Rich text link</a></p>
+                            <pre><code class="language-html">&lt;h4&gt;Heading four&lt;/h4&gt;</code></pre>
+                        </div>
+                        <div class="layout__single">
+                            <p>Paragraph</p>
+                            <pre><code class="language-html">&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;</code></pre>
+                        </div>
+                        <div class="layout__single rich-text">
+                            <div><a href="#">Rich text link</a></div>
+                            <pre><code class="language-html">&lt;div class="rich-text"&gt;&lt;a href=""&gt;Link&lt;/a&gt;&lt;/div&gt;</code></pre>
                         </div>
                     </div>
 
                     <div class="layout__demo-block">
+                        <h2>Layout</h2>
+
+                        <div class="layout__single">
+                            <h3>Default layout</h3>
+                            <div class="layout">
+                                <article class="layout__article">
+                                    Hello world
+                                </article>
+                            </div>
+<pre><code class="language-html">&lt;div class="layout"&gt;
+    &lt;article class="article__layout"&gt;Hello world&lt;/article&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                    <div class="layout__demo-block">
                         <h2>Grid</h2>
 
-                        <p>Sidebar</p>
-                        <div class="grid grid--sidebar">
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
+                        <div class="layout__single">
+                            <h3>Sidebar</h3>
+                            <div class="grid grid--sidebar">
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                            </div>
+<pre><code class="language-html">&lt;div class="grid grid--sidebar"&gt;
+    &lt;div class="grid__item"&gt;&lt;/div&gt;
+    &lt;div class="grid__item"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
                         </div>
 
-                        <p>Six column</p>
-                        <div class="grid grid--six-col">
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
+                        <div class="layout__single">
+                            <h3>Six column</h3>
+                            <div class="grid grid--six-col">
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                            </div>
+<pre><code class="language-html">&lt;div class="grid grid--six-col"&gt;
+    &lt;div class="grid__item"&gt&lt;/div&gt;
+    ...
+&lt;/div&gt;</code></pre>
                         </div>
 
-                        <p>Four column</p>
-                        <div class="grid grid--four-col">
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
+                        <div class="layout__single">
+                            <h3>Four column</h3>
+                            <div class="grid grid--four-col">
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                            </div>
+<pre><code class="language-html">&lt;div class="grid grid--four-col"&gt;
+    &lt;div class="grid__item"&gt;&lt;/div&gt;
+    ...
+&lt;/div&gt;</code></pre>
                         </div>
 
-                        <p>Three column</p>
-                        <div class="grid grid--three-col">
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
+                        <div class="layout__single">
+                            <h3>Three column</h3>
+                            <div class="grid grid--three-col">
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                            </div>
+<pre><code class="language-html">&lt;div class="grid grid--three-col"&gt;
+    &lt;div class="grid__item"&gt;&lt;/div&gt;
+    ...
+&lt;/div&gt;</code></pre>
                         </div>
 
-                        <p>Two column</p>
-                        <div class="grid grid--two-col">
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
-                            <div class="grid__item"></div>
+                        <div class="layout__single">
+                            <h3>Two column</h3>
+                            <div class="grid grid--two-col">
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                                <div class="grid__item"></div>
+                            </div>
+<pre><code class="language-html">&lt;div class="grid grid--two-col"&gt;
+    &lt;div class="grid__item"&gt;&lt;/div&gt;
+    ...
+&lt;/div&gt;</code></pre>
                         </div>
+
                     </div>
                 </article>
             </div>
         </main>
-
-        <footer class="footer">
-            Footer
-        </footer>
 
         <script src="../static_compiled/js/main.js"></script>
     </body>

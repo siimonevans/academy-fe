@@ -17,4 +17,15 @@
         padding: $grid 0 ($grid * 2);
         border-bottom: 1px solid var(--color--border);
     }
+
+    &__single {
+        border: 1px solid var(--color--border);
+        margin: $grid 0;
+        padding: $grid $grid 5px;
+        border-radius: 5px;
+
+        p {
+            margin: 0;
+        }
+    }
 }
