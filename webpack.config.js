@@ -13,15 +13,15 @@ const options = {
         // multiple entries can be added here
         // 'main' is ignored from prettier because if vue (or anything else) isn't added
         // here, it will deem the quotes uneccessary.
-        'main': `./${projectRoot}/static_src/javascript/main.js`, // prettier-ignore
+        'academy-fe': `./${projectRoot}/static_src/javascript/academy-fe.js`, // prettier-ignore
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
     },
     output: {
         path: path.resolve(`./${projectRoot}/static_compiled/`),
-        // based on entry name, e.g. main.js
-        filename: 'js/[name].js', // based on entry name, e.g. main.js
+        // based on entry name, e.g. academy-fe.js
+        filename: 'js/[name].js', // based on entry name, e.g. academy-fe.js
     },
     plugins: [
         new CopyPlugin([

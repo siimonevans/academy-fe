@@ -1,4 +1,4 @@
-import '../sass/main.scss';
+import '../sass/academy-fe.scss';
 import SkipLink from './components/skip-link';
 
 function initComponent(ComponentClass) {
