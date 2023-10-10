@@ -30,15 +30,23 @@ See the next section for using this framework, or check out the examples [here](
 <link rel="stylesheet" type="text/css" href="{% static 'academy-fe.css' %}" />
 ```
 
-5. Copy the raw JS code [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/js/academy-fe.js) and save it to a new file within your static directory named `academy-fe.js`.
+5. Create a new CSS file named `main.css` and save it to a new file within your static directory.
 
-6. Add a reference just above your closing `</body>` tag linking to the JS file
+6. Add a reference in your `<head>` linking to the CSS file
+
+```html
+<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
+```
+
+You should use this file to add your own custom CSS.
+
+7. Copy the raw JS code [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/js/academy-fe.js) and save it to a new file within your static directory named `academy-fe.js`.
+
+8. Add a reference just above your closing `</body>` tag linking to the JS file
 
 ```html
 <script src="{% static 'academy-fe.js' %}"></script>
 ```
-
-7. You should be good to go!
 
 ## Got an improvement? Run it locally
 
