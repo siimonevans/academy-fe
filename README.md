@@ -22,20 +22,20 @@ See the next section for using this framework, or check out the examples [here](
 
 2. If you haven't already, follow Django's documentation to [configure and serve static files](https://docs.djangoproject.com/en/4.2/howto/static-files/) (be sure to check which version of Django you're using and use the right documentation version).
 
-3. Copy the raw CSS code [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/css/main.css) and save it to a new file within your static directory named `main.css`.
+3. Copy the raw CSS code [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/css/academy-fe.css) and save it to a new file within your static directory named `academy-fe.css`.
 
 4. Add a reference in your `<head>` linking to the CSS file
 
 ```html
-<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'academy-fe.css' %}" />
 ```
 
-5. Copy the raw JS code [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/js/main.js) and save it to a new file within your static directory named `main.js`.
+5. Copy the raw JS code [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/js/academy-fe.js) and save it to a new file within your static directory named `academy-fe.js`.
 
 6. Add a reference just above your closing `</body>` tag linking to the JS file
 
 ```html
-<script src="{% static 'main.js' %}"></script>
+<script src="{% static 'academy-fe.js' %}"></script>
 ```
 
 7. You should be good to go!
@@ -67,6 +67,6 @@ npm run build:prod
 
 ## Compiled files
 
-- CSS [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/css/main.css)
+- CSS [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/css/academy-fe.css)
 
-- JS [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/js/main.js)
+- JS [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/js/academy-fe.js)
