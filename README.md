@@ -20,9 +20,9 @@ See the next section for using this framework, or check out the examples [here](
 />
 ```
 
-2. If you haven't already, follow Django's documentation to [configure and serve static files](https://docs.djangoproject.com/en/4.2/howto/static-files/) (be sure to check which version of Django you're using and use the right documentation version).
+2. If you haven't already, follow Django's documentation to [configure and serve static files](https://docs.djangoproject.com/en/4.2/howto/static-files/) (be sure to check which version of Django you're using and use the right documentation version)
 
-3. Copy the raw CSS code [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/css/academy-fe.css) and save it to a new file within your static directory named `academy-fe.css`.
+3. Copy the raw CSS code [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/css/academy-fe.css) and save it to a new file within your static directory named `academy-fe.css`
 
 4. Add a reference in your `<head>` linking to the CSS file
 
@@ -30,17 +30,17 @@ See the next section for using this framework, or check out the examples [here](
 <link rel="stylesheet" type="text/css" href="{% static 'academy-fe.css' %}" />
 ```
 
-5. Create a new CSS file named `main.css` and save it to a new file within your static directory.
+5. Create a new CSS file named `main.css` and save it to a new file within your static directory
 
-6. Add a reference in your `<head>` linking to the CSS file
+6. Add a reference in your `<head>` linking to the `main.css` file
 
 ```html
 <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
 ```
 
-You should use this file to add your own custom CSS.
+You can then use this file to add your own custom CSS
 
-7. Copy the raw JS code [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/js/academy-fe.js) and save it to a new file within your static directory named `academy-fe.js`.
+7. Copy the raw JS code [here](https://raw.githubusercontent.com/siimonevans/academy-fe/master/academy-fe/static_compiled/js/academy-fe.js) and save it to a new file within your static directory named `academy-fe.js`
 
 8. Add a reference just above your closing `</body>` tag linking to the JS file
 
